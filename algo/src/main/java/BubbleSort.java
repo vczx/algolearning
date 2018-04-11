@@ -3,10 +3,9 @@
 //
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] unsortedArray = new int[]{4,2,7,1,3};
+        int[] unsortedArray = PracticeHelper.getTestArray();
 //        printArray(bubbleSort(unsortedArray));
-        printArray(textbookBubbleSort(unsortedArray));
-
+        PracticeHelper.printArray(textbookBubbleSort(unsortedArray));
     }
 
     //my implementation
@@ -41,11 +40,5 @@ public class BubbleSort {
             endingIndex --;
         }
         return array;
-    }
-
-    public static void printArray(int[] array){
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
     }
 }
