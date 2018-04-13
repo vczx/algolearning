@@ -1,11 +1,23 @@
 public class QuickSort {
     public static void main(String[] args) {
         int[] array = new int[]{0,5,2,1,6,3};
-        System.out.println(partition(array,0,array.length-1));
-        System.out.println(codeSchoolPartition(array,0,array.length-1));
+//        System.out.println(partition(array,0,array.length-1));
+//        System.out.println(codeSchoolPartition(array,0,array.length-1));
+
+        quickSort(array,0,array.length-1);
+        PracticeHelper.printArray(array);
+
     }
 
-    public static int[] quickSort(int[] array){
+    public static void quickSort(int[] array, int start, int end){
+        //base case
+        if(start>= end ){
+            return;
+        }
+
+        int pivot = partition(array,start,end);
+        quickSort(array,start, pivot -1);
+        quickSort(array,pivot+1,end);
     }
 
 //    this method is to pick the rightest value as pivot
@@ -16,17 +28,18 @@ public class QuickSort {
 //    move the pivot to the last left pointer location
 //    then the pivot value is at its right position
 
+    //NOT WORKING !!!
     public static int partition(int[] array,int leftPointer,int rightPointer){
         int pivotPos = rightPointer;
         int pivotValue = array[rightPointer];
 
         rightPointer -=1;
         while(true){
-            if(array[leftPointer] < pivotValue){
+            while(array[leftPointer] < pivotValue){
                 leftPointer ++;
             }
 
-            if(array[rightPointer] > pivotValue){
+            while(array[rightPointer] > pivotValue){
                 rightPointer--;
             }
 
