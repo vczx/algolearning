@@ -1,3 +1,5 @@
+package commonSenseDataStructureBook;
+
 // For bubble sort, each passthrough the highest unsorted value bubble to the right most
 // Each passthrough will sort one number to the right most, hence the index keep reducing
 //

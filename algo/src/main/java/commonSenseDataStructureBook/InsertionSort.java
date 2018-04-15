@@ -1,11 +1,13 @@
+package commonSenseDataStructureBook;
+
 public class InsertionSort {
     public static void main(String[] args) {
-//        PracticeHelper.printArray(myInsertionSort(PracticeHelper.getTestArray()));
+//        commonSenseDataStructureBook.PracticeHelper.printArray(myInsertionSort(commonSenseDataStructureBook.PracticeHelper.getTestArray()));
 //        System.out.println("--Testing Reverse Array --");
-//        PracticeHelper.printArray(myInsertionSort(PracticeHelper.getReverseArray()));
+//        commonSenseDataStructureBook.PracticeHelper.printArray(myInsertionSort(commonSenseDataStructureBook.PracticeHelper.getReverseArray()));
         System.out.println("--Textbook Implementation--");
         PracticeHelper.printArray(textBookSelectionSort(PracticeHelper.getTestArray()));
-//        PracticeHelper.printArray(textBookSelectionSort(PracticeHelper.getReverseArray()));
+//        commonSenseDataStructureBook.PracticeHelper.printArray(textBookSelectionSort(commonSenseDataStructureBook.PracticeHelper.getReverseArray()));
 
 
     }

@@ -1,3 +1,5 @@
+package commonSenseDataStructureBook;
+
 public class SelectionSort {
     public static void main(String[] args) {
         int[] a = PracticeHelper.getTestArray();

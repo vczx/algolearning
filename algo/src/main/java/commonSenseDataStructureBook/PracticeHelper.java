@@ -1,3 +1,5 @@
+package commonSenseDataStructureBook;
+
 public class PracticeHelper {
     public static int[] getTestArray(){
         return new int[]{4,2,7,1,3};
