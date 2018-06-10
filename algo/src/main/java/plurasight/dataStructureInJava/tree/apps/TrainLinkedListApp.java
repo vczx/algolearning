@@ -1,6 +1,7 @@
 package plurasight.dataStructureInJava.tree.apps;
 
-import ds.BasicLinkedList;
+
+import plurasight.dataStructureInJava.tree.ds.BasicLinkedList;
 
 public class TrainLinkedListApp {
 	BasicLinkedList<TrainCar> train = new BasicLinkedList<TrainCar>();

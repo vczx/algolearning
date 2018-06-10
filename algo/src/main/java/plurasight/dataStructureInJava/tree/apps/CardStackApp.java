@@ -1,10 +1,11 @@
 package plurasight.dataStructureInJava.tree.apps;
 
-import ds.BasicStack;
+import plurasight.dataStructureInJava.tree.ds.BasicStack;
+import plurasight.dataStructureInJava.tree.ds.MyStack;
 
 public class CardStackApp {
 	BasicStack<String> stack = new BasicStack<String>();
-
+//	MyStack<String> stack = new MyStack<String>();
 	public static void main(String[] args) {
 		CardStackApp app = new CardStackApp();
 		app.stackCards();

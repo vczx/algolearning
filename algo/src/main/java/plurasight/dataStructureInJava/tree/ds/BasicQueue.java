@@ -28,7 +28,7 @@ public class BasicQueue<X> {
 	}
 	
 	public void enQueue(X item) {
-		//first see if the queue is full
+		//first see if the queue is full.??????
 		if((end + 1) % data.length == front) {
 			throw new IllegalStateException("The Queue is full!");
 		}
