@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+
 public class RotateArray {
     //https://leetcode.com/problems/rotate-array/description/
     public static void main(String[] args) throws Exception {
@@ -95,4 +97,38 @@ public class RotateArray {
             end--;
         }
     }
+    //
+    // TODO: New Method, to research and study - Block replace method
+    // https://www.geeksforgeeks.org/block-swap-algorithm-for-array-rotation/
+    public void rotate1(int[] nums, int k) {
+        k %= nums.length;
+        int[] extra = new int[k];
+        for (int i = 0; i < k; i++)
+            extra[i] = nums[nums.length-k+i];
+
+        for (int i = nums.length - 1; i >= k; i--)
+            nums[i] = nums[i-k];
+
+        for (int i = 0; i < k; i++)
+            nums[i] = extra[i];
+    }
+
+    public void rotate(int[] nums, int k) {
+        k %= nums.length;
+        int[] extra = new int[k];
+        System.arraycopy(nums, nums.length-k, extra, 0, k);
+        System.arraycopy(nums, 0, nums, k, nums.length-k);
+        System.arraycopy(extra, 0, nums, 0, k);
+    }
+
+    public void rotate4(int[] nums, int k) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            list.add(nums[i]);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            nums[(i + k) % nums.length] = list.get(i);
+        }
+    }
+    //
 }
